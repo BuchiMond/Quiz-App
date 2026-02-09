@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Python Programming Quiz</title>
+    <link rel="stylesheet" href="styles/quiz.css">
+</head>
+
+<body>
+    <div class="container">
+        <header class="quiz-header">
+            <h1>Python Programming Quiz</h1>
+            <p class="subtitle">Test your Python knowledge with 10 questions</p>
+        </header>
+
+        <div class="quiz-container" id="quizContainer">
+            <div class="user-info-section" id="userInfoSection">
+                <h3>Student Information</h3>
+                <div class="info-fields">
+                    <div class="field-group">
+                        <label for="studentName">Full Name:</label>
+                        <input type="text" id="studentName" placeholder="Enter your full name" required>
+                    </div>
+                    <div class="field-group">
+                        <label for="studentGender">Gender:</label>
+                        <select id="studentGender" required>
+                            <option value="">Select gender</option>
+                            <option value="Male">Male</option>
+                            <option value="Female">Female</option>
+                            <option value="Other">Other</option>
+                        </select>
+                    </div>
+                </div>
+            </div>
+
+            <div class="quiz-content" id="quizContent">
+                <!-- Questions will be dynamically inserted here -->
+            </div>
+
+            <div class="quiz-actions">
+                <button class="btn btn-primary" id="gradeBtn">Grade Quiz</button>
+            </div>
+        </div>
+
+        <div class="results-container hidden" id="resultsContainer">
+            <div class="score-display">
+                <h2>Your Score</h2>
+                <div class="score-circle">
+                    <span class="score-text" id="scoreText">0/10</span>
+                </div>
+                <p class="score-percentage" id="scorePercentage">0%</p>
+            </div>
+
+            <div class="incorrect-answers" id="incorrectAnswers">
+                <!-- Incorrect answers will be displayed here -->
+            </div>
+
+            <button class="btn btn-secondary" id="retakeBtn">Take Quiz Again</button>
+        </div>
+
+        <div class="database-container hidden" id="databaseContainer">
+            <div class="database-header">
+                <h2>Quiz Submissions Database</h2>
+                <button class="btn btn-secondary" id="closeDatabaseBtn">Close Database</button>
+            </div>
+            <div class="database-content" id="databaseContent">
+                <!-- Database entries will be displayed here -->
+            </div>
+        </div>
+
+        <footer class="footer">
+            <a href="#" class="database-link" id="databaseLink">Access Database</a>
+        </footer>
+    </div>
+
+    <script src="scripts/questions.js"></script>
+    <script src="scripts/quiz.js"></script>
+</body>
+
+</html>
